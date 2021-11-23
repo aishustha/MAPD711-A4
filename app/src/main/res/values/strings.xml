@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">AishwaryaShrestha_KeshavDulal_MAPD711_Assignment4</string>
+
+    <!--  Login Screen  -->
+    <string name="username_label">UserName</string>
+    <string name="password_label">Password</string>
+    <string name="login_label">Login</string>
+    <string name="register_label">Register</string>
+
+    <!--  Registration Screen  -->
+
+    <string name="first_name_label">First Name</string>
+    <string name="last_name_label">Last Name</string>
+    <string name="address_label">Address</string>
+    <string name="city_label">City</string>
+    <string name="postal_code_label">Postal Code</string>
+    <string name="telephone_label">Telephone</string>
+    <string name="email_label">Email</string>
+    <string name="booking_successful">Booking Successful</string>
+
+    <string-array name="peopleCount">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+</resources>
