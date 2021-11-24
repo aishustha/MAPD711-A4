@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
-    tools:context=".MainActivity">
+    tools:context=".LoginScreen">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,16 +13,17 @@
         android:layout_marginBottom="20sp"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/loginUsernamelabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Username" />
+<!--        <TextView-->
+<!--            android:id="@+id/loginUsernamelabel"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Username" />-->
 
         <EditText
             android:id="@+id/loginUsernameTf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="UserName"
             android:autofillHints=""
             android:ems="10"
             android:inputType="textPersonName" />
@@ -34,11 +35,11 @@
         android:layout_marginBottom="20sp"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/loginPasswordlabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Password" />
+<!--        <TextView-->
+<!--            android:id="@+id/loginPasswordlabel"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Password" />-->
 
         <EditText
             android:id="@+id/loginPasswordTf"

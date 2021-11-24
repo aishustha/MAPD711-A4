@@ -1,4 +1,4 @@
-package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4
+package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4.users
 
 import android.content.Context
 import androidx.room.Database
@@ -7,19 +7,19 @@ import androidx.room.RoomDatabase
 
 //database holder serves as main access point
 @Database(entities = [User::class], version = 1, exportSchema = false)
-    abstract class UserDatabase: RoomDatabase() {
+abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
 
-    companion object{
+    companion object {
         @Volatile
         private var INSTANCE: UserDatabase? = null
 
-        fun getDatabaseUser(context: Context) : UserDatabase {
+        fun getDatabaseUser(context: Context): UserDatabase {
 
-            if(INSTANCE != null ) return INSTANCE!!
+            if (INSTANCE != null) return INSTANCE!!
 
-            synchronized(this){
+            synchronized(this) {
                 INSTANCE = Room.databaseBuilder(context, UserDatabase::class.java, "USERDB")
                     .fallbackToDestructiveMigration()
                     .build()

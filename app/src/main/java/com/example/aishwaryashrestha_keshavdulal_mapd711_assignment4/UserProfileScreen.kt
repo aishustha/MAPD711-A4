@@ -1,11 +1,11 @@
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
-class SelectCruise : AppCompatActivity() {
+class UserProfileScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_select_cruise)
+        setContentView(R.layout.activity_user_profile)
     }
 }

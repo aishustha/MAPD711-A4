@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30sp"
-    tools:context=".Booking">
+    tools:context=".CruiseBookingScreen">
 
     <TextView
         android:layout_width="match_parent"
@@ -120,6 +120,6 @@
         android:id="@+id/buttonBookCruise"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="Book Cruise"/>
+        android:text="Book Cruise"
+        android:textColor="@color/white" />
 </LinearLayout>

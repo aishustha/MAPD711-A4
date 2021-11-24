@@ -1,4 +1,4 @@
-package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4
+package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4.users
 
 import android.content.Context
 import androidx.lifecycle.LiveData
@@ -7,7 +7,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 //abstracts access to multiple data sources
-class UserRepository() {
+class UserRepository {
 
     companion object {
         var userDatabase: UserDatabase? = null
@@ -37,7 +37,7 @@ class UserRepository() {
 
         }
 
-        fun getUser(context: Context, firstname: String) : LiveData<User>{
+        fun getUser(context: Context, firstname: String): LiveData<User> {
             userDatabase = initializeDB(context)
             userModel = userDatabase!!.userDao().getUser(firstname)
             return userModel!!
@@ -54,4 +54,3 @@ class UserRepository() {
         }
     }
 }
-
