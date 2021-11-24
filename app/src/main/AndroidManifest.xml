@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AishwaryaShrestha_KeshavDulal_MAPD711_Assignment4">
         <activity
+            android:name=".Confirmation"
+            android:exported="false" />
+        <activity
+            android:name=".Booking"
+            android:exported="false" />
+        <activity
             android:name=".Dashboard"
             android:exported="false" />
         <activity

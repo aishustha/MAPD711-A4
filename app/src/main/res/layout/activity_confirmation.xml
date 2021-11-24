@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Confirmation">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@mipmap/a" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Star Cruise"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We scour the world for amazing places just this side of unreachable, then seek out the most authentic ways for guests to experience them - in small groups that are easily absorbed by local cultures rather than intruding on them. "
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Cruise"
+        android:textColor="@color/white"
+        />
+</LinearLayout>

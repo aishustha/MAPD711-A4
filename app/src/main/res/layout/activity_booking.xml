@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30sp"
+    tools:context=".Booking">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Booking Information"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/customerFullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cruise Name/ID"
+        android:textSize="16sp" />
+
+
+    <EditText
+        android:id="@+id/amountPaid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Amount Paid"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/checkInDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Start Date"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="Number of Adults"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/numberOfAdults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/peopleCount"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="Number of Kids"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/numberOfKids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/peopleCount"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="Number of Seniors"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/numberOfSeniors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/peopleCount"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonBookCruise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Book Cruise"/>
+</LinearLayout>
