@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -18,27 +17,34 @@
         android:textSize="20dp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/customerFullname"
+    <!--    <EditText-->
+    <!--        android:id="@+id/customerFullname"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="Cruise Name/ID"-->
+    <!--        android:textSize="16sp" />-->
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Cruise Name/ID"
-        android:textSize="16sp" />
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Select a cruise"
+        android:textColor="#000000" />
 
-
-    <EditText
-        android:id="@+id/amountPaid"
+    <Spinner
+        android:id="@+id/cruiseSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Amount Paid"
+        android:entries="@array/cruiseList"
         android:textSize="16sp" />
 
     <EditText
         android:id="@+id/checkInDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Start Date"
         android:layout_marginBottom="20dp"
+        android:hint="Start Date"
         android:textSize="16sp" />
 
     <LinearLayout
@@ -57,7 +63,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/numberOfAdults"
+            android:id="@+id/adultSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/peopleCount"
@@ -81,7 +87,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/numberOfKids"
+            android:id="@+id/kidsSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/peopleCount"
@@ -107,7 +113,7 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/numberOfSeniors"
+            android:id="@+id/guestSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/peopleCount"
@@ -115,6 +121,13 @@
             tools:ignore="TouchTargetSizeCheck" />
 
     </LinearLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/amountPaid"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Amount Paid"-->
+<!--        android:textSize="16sp" />-->
 
     <Button
         android:id="@+id/buttonBookCruise"

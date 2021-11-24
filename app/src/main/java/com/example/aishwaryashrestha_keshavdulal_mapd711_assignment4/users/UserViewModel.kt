@@ -3,15 +3,18 @@ package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4.users
 import android.content.Context
 import android.text.TextUtils
 import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 
-//provide data to the UI and survive configuration changes
-//acts as a communication center between the Repository and the UI
+// provide data to the UI and survive configuration changes
+// acts as a communication center between the Repository and the UI
 
 class UserViewModel : ViewModel() {
+
+    // calling repository tasks and
+    // sending the results to the Activity
     var liveUserData: LiveData<User>? = null
+
     fun insertCustomer(
         context: Context,
         username: String, password: String, firstname: String, lastname: String,

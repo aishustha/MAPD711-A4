@@ -30,4 +30,12 @@
         <item>9</item>
         <item>10</item>
     </string-array>
+
+    <string-array name="cruiseList">
+        <item>Bahamas Cruise</item>
+        <item>Caribbean Cruise</item>
+        <item>Cuba Cruise</item>
+        <item>Sampler Cruise</item>
+        <item>Star Cruise</item>
+    </string-array>
 </resources>

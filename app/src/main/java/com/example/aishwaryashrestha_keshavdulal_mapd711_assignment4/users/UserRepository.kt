@@ -3,7 +3,7 @@ package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4.users
 import android.content.Context
 import androidx.lifecycle.LiveData
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 
 //abstracts access to multiple data sources
@@ -27,7 +27,7 @@ class UserRepository {
         ) {
             userDatabase = initializeDB(context)
 
-            CoroutineScope(Dispatchers.IO).launch {
+            CoroutineScope(IO).launch {
                 val userDetails = User(
                     username, password,
                     firstname, lastname, address, city, postalCode, telephone, email
