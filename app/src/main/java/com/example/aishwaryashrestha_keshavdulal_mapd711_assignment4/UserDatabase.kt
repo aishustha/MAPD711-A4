@@ -15,12 +15,12 @@ import androidx.room.RoomDatabase
         @Volatile
         private var INSTANCE: UserDatabase? = null
 
-        fun getDatabaseCus(context: Context) : UserDatabase {
+        fun getDatabaseUser(context: Context) : UserDatabase {
 
             if(INSTANCE != null ) return INSTANCE!!
 
             synchronized(this){
-                INSTANCE = Room.databaseBuilder(context, UserDatabase::class.java, "CUSTOMERDB")
+                INSTANCE = Room.databaseBuilder(context, UserDatabase::class.java, "USERDB")
                     .fallbackToDestructiveMigration()
                     .build()
 

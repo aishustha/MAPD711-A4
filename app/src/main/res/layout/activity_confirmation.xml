@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="We scour the world for amazing places just this side of unreachable, then seek out the most authentic ways for guests to experience them - in small groups that are easily absorbed by local cultures rather than intruding on them. "
-
+/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

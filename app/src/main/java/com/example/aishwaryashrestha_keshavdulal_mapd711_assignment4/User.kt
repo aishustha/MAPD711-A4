@@ -23,5 +23,5 @@ data class User(
 ){
         //Defining the primary key.
         @PrimaryKey(autoGenerate = true)
-        @ColumnInfo(name = "customerId") var customerId: Int? = null
+        @ColumnInfo(name = "userId") var userId: Int? = null
 }

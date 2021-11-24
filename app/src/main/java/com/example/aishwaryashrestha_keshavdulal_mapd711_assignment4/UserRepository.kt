@@ -15,11 +15,11 @@ class UserRepository() {
 
         //initialize database
         fun initializeDB(context: Context): UserDatabase {
-            return UserDatabase.getDatabaseCus(context)
+            return UserDatabase.getDatabaseUser(context)
         }
 
         //Initialize insertCustomer()
-        fun insertCustomer(
+        fun insertUser(
             context: Context, username: String,
             password: String, firstname: String, lastname: String,
             address: String, city: String, postalCode: String,
@@ -28,16 +28,16 @@ class UserRepository() {
             userDatabase = initializeDB(context)
 
             CoroutineScope(Dispatchers.IO).launch {
-                val customerDetails = User(
+                val userDetails = User(
                     username, password,
                     firstname, lastname, address, city, postalCode, telephone, email
                 )
-                userDatabase!!.userDao().addCustomer(customerDetails)
+                userDatabase!!.userDao().addCustomer(userDetails)
             }
 
         }
 
-        fun getCustomerDetails(context: Context, firstname: String) : LiveData<User>{
+        fun getUserDetails(context: Context, firstname: String) : LiveData<User>{
             userDatabase = initializeDB(context)
             userModel = userDatabase!!.userDao().getCustomer(firstname)
             return userModel!!

@@ -10,24 +10,24 @@ import com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4.UserReposit
 //acts as a communication center between the Repository and teh UI
 
 class UserViewModel : ViewModel() {
-    var liveCustomerData: LiveData<User>? = null
+    var liveUserData: LiveData<User>? = null
     fun insertCustomer(context: Context, username: String, password: String, firstname: String, lastname: String,
                        address: String, city: String, postalCode: String,
                        telephone: String, email: String){
-        UserRepository.insertCustomer(context, username, password,
+        UserRepository.insertUser(context, username, password,
             firstname, lastname, address, city, postalCode, telephone, email)
     }
 
-    fun getCustomer(context: Context, username: String, password: String, firstname: String, lastname: String,
+    fun getUser(context: Context, username: String, password: String, firstname: String, lastname: String,
                     address: String, city: String, postalCode: String,
                     telephone: String, email: String) : LiveData<User>{
-        liveCustomerData = UserRepository.getCustomerDetails(context, username)
-        return liveCustomerData!!
+        liveUserData = UserRepository.getUserDetails(context, username)
+        return liveUserData!!
 
     }
 
     fun getLogin(context: Context, username: String, password: String) : LiveData<User>{
-        liveCustomerData = UserRepository.getLoginDetails(context, username, password)
-        return liveCustomerData!!
+        liveUserData = UserRepository.getLoginDetails(context, username, password)
+        return liveUserData!!
     }
 }
