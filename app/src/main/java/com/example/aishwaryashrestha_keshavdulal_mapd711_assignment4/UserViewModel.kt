@@ -21,13 +21,13 @@ class UserViewModel : ViewModel() {
     fun getUser(context: Context, username: String, password: String, firstname: String, lastname: String,
                     address: String, city: String, postalCode: String,
                     telephone: String, email: String) : LiveData<User>{
-        liveUserData = UserRepository.getUserDetails(context, username)
+        liveUserData = UserRepository.getUser(context, username)
         return liveUserData!!
 
     }
 
     fun getLogin(context: Context, username: String, password: String) : LiveData<User>{
-        liveUserData = UserRepository.getLoginDetails(context, username, password)
+        liveUserData = UserRepository.getLogin(context, username, password)
         return liveUserData!!
     }
 }

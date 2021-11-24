@@ -13,12 +13,13 @@ import com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4.User
 interface UserDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addCustomer(mainUser: User)
+    fun addCustomer(user: User)
 
-    @Query("SELECT * FROM mainUser WHERE username =:username AND password=:password ORDER BY userId ASC")
-    fun getLoginDetails(username: String, password: String): LiveData<User>
+    //defining a query method using @Query Annotation
+    @Query("SELECT * FROM user_table WHERE username=:userName")
+    fun getUser(userName: String?) : LiveData<User>
 
-    @Query("SELECT * FROM mainUser WHERE username =:username")
-    fun getCustomer(username: String) : LiveData<User>
+    @Query("SELECT * FROM user_table WHERE username=:userName AND password=:password")
+    fun getLogin(userName: String?, password:String?) : LiveData<User>
 
 }

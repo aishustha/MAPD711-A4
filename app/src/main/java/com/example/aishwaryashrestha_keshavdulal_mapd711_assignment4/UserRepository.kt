@@ -37,20 +37,21 @@ class UserRepository() {
 
         }
 
-        fun getUserDetails(context: Context, firstname: String) : LiveData<User>{
+        fun getUser(context: Context, firstname: String) : LiveData<User>{
             userDatabase = initializeDB(context)
-            userModel = userDatabase!!.userDao().getCustomer(firstname)
+            userModel = userDatabase!!.userDao().getUser(firstname)
             return userModel!!
         }
 
-        fun getLoginDetails(
+        fun getLogin(
             context: Context,
             username: String,
             password: String
         ): LiveData<User>? {
             userDatabase = initializeDB(context)
-            userModel = userDatabase!!.userDao().getLoginDetails(username, password)
+            userModel = userDatabase!!.userDao().getLogin(username, password)
             return userModel
         }
     }
 }
+
