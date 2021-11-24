@@ -5,10 +5,16 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Cruise"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AishwaryaShrestha_KeshavDulal_MAPD711_Assignment4">
+        <activity
+            android:name=".SelectCruise"
+            android:exported="false" />
+        <activity
+            android:name=".checkout"
+            android:exported="false" />
         <activity
             android:name=".Update"
             android:exported="false" />
