@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Confirm">
+
+    <!-- Message-->
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text=""
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+
+    <!-- Message-->
+    <TextView
+        android:id="@+id/textViewmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="40dp"
+        android:text="Confirm Guests"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <!--For adults field-->
+    <TextView
+        android:id="@+id/adults"
+        android:layout_width="110dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:text="Adults:"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
+<!--    <Spinner-->
+<!--        android:id="@+id/adults_spin"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="200dp"-->
+<!--        android:layout_alignRight="@+id/adults"-->
+<!--        />-->
+
+    <TextView
+        android:id="@+id/child"
+        android:layout_width="110dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:text="Children:"
+        android:layout_below="@+id/adults"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible"
+        tools:ignore="HardcodedText" />
+<!--    <Spinner-->
+<!--        android:id="@+id/child_spin"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/adults_spin"-->
+<!--        android:layout_toRightOf="@+id/child"-->
+<!--        android:entries="adults"/>-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="Submit"
+        android:layout_marginTop="400dp"
+        android:id="@+id/buttonguests"
+        />
+
+    <TextView
+        android:id="@+id/agemess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Any guests over age of 60?"
+        android:layout_below="@+id/child"
+        android:layout_marginLeft="20dp"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/agemess"
+        >
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/agemess"
+            android:layout_marginLeft="20dp"
+            android:text="YES"
+
+            />
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rb1"
+            android:layout_marginLeft="20dp"
+            android:text="NO"
+
+            />
+    </RadioGroup>
+
+</RelativeLayout>

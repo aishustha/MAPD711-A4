@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="all">
+        <item android:title="Bahamas"
+              android:id="@+id/checkbox1" />
+        <item android:title="Carribean"
+            android:id="@+id/checkbox2" />
+        <item android:title="Cuba"
+            android:id="@+id/checkbox3" />
+        <item android:title="Sampler"
+            android:id="@+id/checkbox4" />
+        <item android:title="Star"
+            android:id="@+id/checkbox5" />
+    </group>
+</menu>

@@ -1,6 +1,7 @@
 package com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
@@ -11,71 +12,39 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4.users.UserViewModel
 
 class UserRegistrationScreen : AppCompatActivity() {
-    lateinit var userViewModel: UserViewModel
-    lateinit var context: Context
-    lateinit var username: String
-    lateinit var password: String
-    lateinit var firstname: String
-    lateinit var lastname: String
-    lateinit var address: String
-    lateinit var city: String
-    lateinit var postalCode: String
-    lateinit var telephone: String
-    lateinit var email: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
+    }
+        // Function of Save button
+        fun save_button(view: android.view.View) {
 
-        //consider the current Activity as a current context
-        context = this@UserRegistrationScreen
+            if (view.id == R.id.btn_save) {
 
-        //initializing studentModel Object
-        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+                // Fetching values from user
+                val fname = findViewById<EditText>(R.id.ETname)
+                val lname = findViewById<EditText>(R.id.ETlname)
+                val email = findViewById<EditText>(R.id.ETemail)
+                val uname = findViewById<EditText>(R.id.ETuser)
+                val password = findViewById<EditText>(R.id.ETpassword)
+                val address = findViewById<EditText>(R.id.ETadd)
+                val city = findViewById<EditText>(R.id.ETcity)
+                val pcode = findViewById<EditText>(R.id.ETpcode)
+                val phone = findViewById<EditText>(R.id.ETphone)
 
 
-        var buttonRegister: Button = findViewById(R.id.register_btn)
-        var usernameEdit: EditText = findViewById(R.id.username_tf)
-        var passwordEdit: EditText = findViewById(R.id.password_tf)
-        var firstnameEdit: EditText = findViewById(R.id.firstname_tf)
-        var lastnameEdit: EditText = findViewById(R.id.lastname_tf)
-        var addressEdit: EditText = findViewById(R.id.address_tf)
-        var cityEdit: EditText = findViewById(R.id.city_tf)
-        var postalCodeEdit: EditText = findViewById(R.id.postalCode_tf)
-        var telephoneEdit: EditText = findViewById(R.id.telephone_tf)
-        var emailEdit: EditText = findViewById(R.id.email_tf)
-
-        buttonRegister.setOnClickListener {
-            username = usernameEdit.text.toString().trim()
-            password = passwordEdit.text.toString().trim()
-            firstname = firstnameEdit.text.toString().trim()
-            lastname = lastnameEdit.text.toString().trim()
-            address = addressEdit.text.toString().trim()
-            city = cityEdit.text.toString().trim()
-            postalCode = postalCodeEdit.text.toString().trim()
-            telephone = telephoneEdit.text.toString().trim()
-            email = emailEdit.text.toString().trim()
-
-            println("🐞 ${username}, ${password}, ${firstname} ${TextUtils.isEmpty(username)}", )
-
-            if (TextUtils.isEmpty(username) || password.isEmpty() || firstname.isEmpty() || lastname.isEmpty() || address.isEmpty()
-                || city.isEmpty() || postalCode.isEmpty() || telephone.isEmpty() || email.isEmpty()
-            ) {
-                Toast.makeText(context, "Please enter the fields!!", Toast.LENGTH_LONG).show()
-            } else {
-                userViewModel.insertCustomer(
-                    context,
-                    username,
-                    password,
-                    firstname,
-                    lastname,
-                    address,
-                    city,
-                    postalCode,
-                    telephone,
-                    email
-                )
+                val intent = Intent(this@UserRegistrationScreen, UserProfileScreen::class.java)
+                intent.putExtra("Fname",fname.text.toString())
+                intent.putExtra("Lname",lname.text.toString())
+                intent.putExtra("Email",email.text.toString())
+                intent.putExtra("Username",uname.text.toString())
+                intent.putExtra("Password",password.text.toString())
+                intent.putExtra("Address",address.text.toString())
+                intent.putExtra("City",city.text.toString())
+                intent.putExtra("Pcode",pcode.text.toString())
+                intent.putExtra("Phone",phone.text.toString())
+                startActivity(intent)
             }
         }
     }
-}

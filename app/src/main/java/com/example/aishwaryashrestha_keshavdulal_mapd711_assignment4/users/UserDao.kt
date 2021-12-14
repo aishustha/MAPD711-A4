@@ -12,13 +12,12 @@ import androidx.room.Query
 interface UserDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addCustomer(user: User)
+    fun insertCustomer(customerModel: User)
+
 
     //defining a query method using @Query Annotation
-    @Query("SELECT * FROM user_table WHERE username=:userName")
-    fun getUser(userName: String?): LiveData<User>
+    @Query("SELECT * FROM customer WHERE UserName =:username")
+    fun getCustomers(username: String?) : LiveData<User>
 
-    @Query("SELECT * FROM user_table WHERE username=:userName AND password=:password")
-    fun getLogin(userName: String?, password: String?): LiveData<User>
 
 }

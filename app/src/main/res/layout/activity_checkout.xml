@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Checkout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv23"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/mess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Check Out"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <!--For name field-->
+    <TextView
+        android:id="@+id/textViewname"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Full Name"
+        android:layout_below="@+id/mess"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/ETname"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textViewname"
+        android:ems="10"
+        android:layout_below="@+id/mess"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <!--For Address field-->
+    <TextView
+        android:id="@+id/textadd"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textViewname"
+        android:text="Address"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/ETadd"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textadd"
+        android:layout_below="@+id/ETname"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <!--For City field-->
+    <TextView
+        android:id="@+id/textCity"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textadd"
+        android:text="City"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/ETCity"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textCity"
+        android:layout_below="@+id/ETadd"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <!--For Postal code field-->
+    <TextView
+        android:id="@+id/textpost"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_below="@+id/textCity"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Postal Code"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/ETpost"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textpost"
+        android:layout_below="@+id/ETCity"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <!--For telephone field-->
+    <TextView
+        android:id="@+id/textphone"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_below="@+id/textpost"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Telephone"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/ETphone"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textphone"
+        android:layout_below="@+id/ETpost"
+        android:ems="10"
+        android:inputType="phone"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <!--For email field-->
+    <TextView
+        android:id="@+id/textmail"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textphone"
+        android:text="E-mail"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/ETmail"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textmail"
+        android:layout_below="@+id/ETphone"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <!--Send Button-->
+    <Button
+        android:id="@+id/buttoncheck"
+        android:onClick="cLickSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reserve"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="370dp"
+        />
+
+</RelativeLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,200 +8,267 @@
     tools:context=".UserRegistrationScreen">
 
     <TextView
-        android:id="@+id/userRegistration_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Registration" />
+        android:text="welcome_to_centen_cruise"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/title"
+        android:textStyle="bold"
+        />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!--For first name field-->
+    <TextView
+        android:id="@+id/textViewname"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:text="first_name"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/ETname"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="95dp"
+        android:layout_toEndOf="@+id/textViewname"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
 
-        <TextView
-            android:id="@+id/username_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Username" />
+    <!--For last name  field-->
+    <TextView
+        android:id="@+id/textlname"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textViewname"
+        android:text="last_name"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
 
-        <EditText
-            android:id="@+id/username_tf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/ETlname"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textlname"
+        android:layout_below="@+id/ETname"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
 
-        <TextView
-            android:id="@+id/password_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Password"
-            />
-        <EditText
-            android:id="@+id/password_tf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
+    <!--For email field-->
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textlname"
+        android:text="email"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/ETemail"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/email"
+        android:layout_below="@+id/ETlname"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
 
-        <TextView
-            android:id="@+id/firstname_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FirstName" />
+    <!--For username field-->
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/email"
+        android:text="username"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
 
-        <EditText
-            android:id="@+id/firstname_tf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/ETuser"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_below="@+id/ETemail"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/user"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
 
-        <TextView
-            android:id="@+id/lastname_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LastName" />
+    <!--For Password field-->
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/user"
+        android:text="password"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
 
-        <EditText
-            android:id="@+id/lastname_tf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/ETpassword"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/address_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Address"/>
-        <EditText
-            android:id="@+id/address_tf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
+        android:layout_below="@+id/ETuser"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/password"
+        android:ems="10"
+        android:inputType="textVisiblePassword"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
 
 
-    </LinearLayout>
 
+    <!--For Address field-->
+    <TextView
+        android:id="@+id/textViewadd"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/password"
+        android:text="address"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/ETadd"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textViewadd"
+        android:layout_below="@+id/ETpassword"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
 
-        <TextView
-            android:id="@+id/city_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="City" />
-        <EditText
-            android:id="@+id/city_tf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
+    <!--For City field-->
+    <TextView
+        android:id="@+id/textViewcity"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_below="@+id/textViewadd"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="city"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
 
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/ETcity"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/postalCode_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Postal Code" />
-        <EditText
-            android:id="@+id/postalCode_tf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textViewcity"
+        android:layout_below="@+id/ETadd"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
 
-    </LinearLayout>
+    <!--For Postal Code field-->
+    <TextView
+        android:id="@+id/textViewpcode"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_below="@+id/textViewcity"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:text="Postal Code"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/ETpcode"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/telephone_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Telephone" />
-        <EditText
-            android:id="@+id/telephone_tf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textViewpcode"
+        android:layout_below="@+id/ETcity"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
 
+    <!--For Phone field-->
+    <TextView
+        android:id="@+id/textViewphone"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textViewpcode"
+        android:text="Phone"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="52dp"
+        tools:visibility="visible" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/ETphone"
+        android:layout_width="243dp"
         android:layout_height="wrap_content"
-
-        android:layout_marginBottom="30sp"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/email_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email" />
-
-
-        <EditText
-            android:id="@+id/email_tf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-    </LinearLayout>
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textViewphone"
+        android:layout_below="@+id/ETpcode"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="43dp" />
 
     <Button
-        android:id="@+id/register_btn"
-        android:layout_width="match_parent"
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="Register" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+        android:onClick="save_button"
+        android:text="Save" />
 
 
-</LinearLayout>
+</RelativeLayout>

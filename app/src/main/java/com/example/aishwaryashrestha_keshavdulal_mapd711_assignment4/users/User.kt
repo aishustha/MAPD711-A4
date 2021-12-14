@@ -4,25 +4,40 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-//annotations
-@Entity(tableName = "user_table")
-
-//represents a table within the database
+@Entity(tableName = "customer")
 data class User(
-    //Defining all the columns in the table
-    @ColumnInfo(name = "username") var username: String,
-    @ColumnInfo(name = "password") var password: String,
-    @ColumnInfo(name = "firstname") var firstname: String,
-    @ColumnInfo(name = "lastname") var lastname: String,
-    @ColumnInfo(name = "address") var address: String,
-    @ColumnInfo(name = "city") var city: String,
-    @ColumnInfo(name = "postalCode") var postalCode: String,
-    @ColumnInfo(name = "telephone") var telephone: String,
-    @ColumnInfo(name = "email") var email: String
+//defining a column FirstName
+    @ColumnInfo(name = "firstname")
+    var FirstName: String,
+    //defining a column LastName
+    @ColumnInfo(name = "lastname")
+    var LastName: String,
+    //defining a column UserName
+    @ColumnInfo(name = "username")
+    var UserName: String,
+    //defining a column Password
+    @ColumnInfo(name = "password")
+    var Password: String,
+    //defining a column Email
+    @ColumnInfo(name = "email")
+    var Email: String,
+    //defining a column Address
+    @ColumnInfo(name = "address")
+    var address: String,
+    //defining a column City
+    @ColumnInfo(name = "city")
+    var City: String,
+    //defining a column PostalCode
+    @ColumnInfo(name = "postcode")
+    var PostalCode: String,
+    //defining a column Phone
+    @ColumnInfo(name = "phone")
+    var Phone: String,
 
-) {
-    //Defining the primary key.
+    )
+{
+    //defining a primary key field Id
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "userId")
-    var userId: Int? = null
+    @ColumnInfo(name = "customerid")
+    var customerId: Int? = null
 }

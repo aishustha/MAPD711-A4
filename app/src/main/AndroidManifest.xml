@@ -10,13 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AishwaryaShrestha_KeshavDulal_MAPD711_Assignment4">
         <activity
+            android:name=".Book"
+            android:exported="false" />
+        <activity
+            android:name=".Checkout"
+            android:exported="false" />
+        <activity
+            android:name=".Payment"
+            android:exported="false" />
+        <activity
+            android:name=".Confirm"
+            android:exported="false" />
+        <activity
+            android:name=".CruiseDetail"
+            android:exported="false" />
+        <activity
+            android:name=".Welcome"
+            android:exported="false" />
+        <activity
             android:name=".UserProfileScreen"
             android:exported="true" />
         <activity
             android:name=".CruiseRegistration"
-            android:exported="false" />
-        <activity
-            android:name=".Checkout"
             android:exported="false" />
         <activity
             android:name=".Update"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,63 +7,84 @@
     android:padding="30dp"
     tools:context=".LoginScreen">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/buttonlogin"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20sp"
-        android:orientation="vertical">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:text="login"
+        android:onClick="login_button_click"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="686dp" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/loginUsernamelabel"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Username" />-->
-
-        <EditText
-            android:id="@+id/loginUsernameTf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="UserName"
-            android:autofillHints=""
-            android:ems="10"
-            android:inputType="textPersonName" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20sp"
-        android:orientation="vertical">
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        android:text="user_name"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="16dp" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/loginPasswordlabel"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Password" />-->
+    <TextView
+        android:id="@+id/TVPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:text="password"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="152dp" />
 
-        <EditText
-            android:id="@+id/loginPasswordTf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/password_label"
-            android:inputType="textPassword" />
-    </LinearLayout>
-
+    <TextView
+        android:id="@+id/TVsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="not_a_member"
+        android:layout_marginTop="500dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="521dp" />
 
     <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="@string/login_label" />
+        android:id="@+id/buttonsignup"
+        android:layout_width="127dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="500dp"
+        android:layout_toEndOf="@+id/TVsignup"
+        android:text="sign_up"
+        android:onClick="signup_button_click"/>
 
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/ETUusername"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="@string/register_label" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginTop="296dp"
+        android:layout_marginStart="10dp"
+        android:text="" />
 
-</LinearLayout>
+    <EditText
+        android:id="@+id/ETPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ETUusername"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="566dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="270dp"
+        android:layout_height="267dp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
