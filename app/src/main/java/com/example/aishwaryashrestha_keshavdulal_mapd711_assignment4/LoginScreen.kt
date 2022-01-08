@@ -9,55 +9,23 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import com.example.aishwaryashrestha_keshavdulal_mapd711_assignment4.users.UserViewModel
+import androidx.lifecycle.ViewModelProvider
 
 class LoginScreen : AppCompatActivity() {
     lateinit var context: Context
-    lateinit var strName: String
-    lateinit var strCourse: String
+//    lateinit var strName: String
+//    lateinit var strCourse: String
+
+    lateinit var userViewModel: UserViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         context = this@LoginScreen
-    }
 
-    //Function of login button
-    fun login_button_click(view: android.view.View) {
-
-        if (view.id == R.id.buttonlogin) {
-
-            val username = findViewById<EditText>(R.id.ETUusername)
-            val password = findViewById<EditText>(R.id.ETPassword)
-            strName = username.text.toString().trim()
-            strCourse = password.text.toString().trim()
-
-            //validation for the empty values
-            if (strName.isEmpty()) {
-                username.error = "Enter User Name"
-                Toast.makeText( context,"User Name should not be empty",Toast.LENGTH_LONG).show()
-            }
-            else if (strCourse.isEmpty()) {
-                password.error = "Enter Password"
-            }
-            else{
-                Toast.makeText( context,"Storing to database",Toast.LENGTH_LONG).show()
-
-            }
-            val prefs = getSharedPreferences("User",Context.MODE_PRIVATE)
-            val editor = prefs.edit()
-
-            editor.putString("Username",username.text.toString())
-            editor.apply()
-
-
-
-            val intent = Intent(this@LoginScreen, Welcome::class.java)
-            val toast = Toast.makeText(applicationContext,"Login Successful",Toast.LENGTH_LONG)
-            toast.show()
-            startActivity(intent)
-
-
-        }
+        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
     }
 
     // Function of Sign up button
@@ -69,4 +37,47 @@ class LoginScreen : AppCompatActivity() {
         }
     }
 
-}
+
+    //Function of login button
+    fun login_button_click(view: android.view.View) {
+
+        if (view.id == R.id.buttonlogin) {
+
+            val username = findViewById<TextView>(R.id.ETUsername)
+            val password = findViewById<TextView>(R.id.ETPassword)
+            //validation for the empty values
+            if (username.text.isEmpty() || password.text.isEmpty()) {
+                Toast.makeText(this, "You cannot leave any fields empty", Toast.LENGTH_LONG).show()
+            } else {
+                userViewModel.getCustomers(
+                    context,
+                    username.text.toString()
+                )!!.observe(this, Observer {
+                    if (it == null) {
+                        Toast.makeText(applicationContext,"Incorrect Login Details",Toast.LENGTH_LONG).show()
+                        username.text = ""
+                        password.text = ""
+                    }
+                    else {
+
+
+                        val prefs = getSharedPreferences("User", Context.MODE_PRIVATE)
+                        val editor = prefs.edit()
+
+                        editor.putString("Username", username.text.toString())
+                        editor.apply()
+
+                        val intent = Intent(this@LoginScreen, Welcome::class.java)
+                        val toast =
+                            Toast.makeText(applicationContext, "Login Successful", Toast.LENGTH_LONG)
+                        toast.show()
+                        startActivity(intent)
+                    }
+                })
+                    }
+                }
+
+            }
+    }
+
+

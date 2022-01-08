@@ -26,7 +26,7 @@ class UserViewModel : ViewModel() {
         postalcode: String,
         phone: String
     ) {
-        viewModelScope.launch(Dispatchers.IO) {
+
             UserRepository.insertCustomer(
                 context,
                 username,
@@ -39,7 +39,6 @@ class UserViewModel : ViewModel() {
                 postalcode,
                 phone
             )
-        }
 
 
     }

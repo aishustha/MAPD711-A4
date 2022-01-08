@@ -59,7 +59,7 @@
         android:onClick="signup_button_click"/>
 
     <EditText
-        android:id="@+id/ETUusername"
+        android:id="@+id/ETUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -73,7 +73,7 @@
         android:id="@+id/ETPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ETUusername"
+        android:layout_below="@+id/ETUsername"
         android:layout_marginStart="90dp"
         android:layout_marginTop="5dp"
         android:ems="10"
